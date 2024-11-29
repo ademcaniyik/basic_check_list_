@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+}
+.section {
+    width: 33%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Padding ve border'ı toplam genişliğe dahil et */
+    overflow: auto; /* İçeriğin taşmasını engelle */
+}
+h2 {
+    text-align: center;
+}
+.done {
+    text-decoration: line-through;
+}
+#new-task {
+    width: 80%; /* Daha uzun yapmak için genişlik ayarı */
+    padding: 5px; /* Daha iyi görünüm için iç boşluk ekleyelim */
+    margin-bottom: 10px; /* Buton ile arasında boşluk bırakalım */
+}
+#add-task-btn {
+    padding: 5px; /* Daha iyi görünüm için iç boşluk ekleyelim */
+}
+ul {
+    padding-left: 0;
+    margin: 0; /* Liste margin'ini sıfırlayarak taşmayı önleyelim */
+}
+li {
+    list-style: none;
+    word-wrap: break-word; /* Uzun kelimelerin taşmasını önler */
+    overflow-wrap: break-word; /* Uzun kelimelerin taşmasını önler */
+    white-space: normal; /* Satır sonlarına göre metni kırar */
+    display: flex;
+    align-items: center; /* Checkbox ve metni aynı hizaya getirmek için */
+    max-width: 100%; /* Liste elemanlarının genişliği sütun genişliğini geçmesin */
+    margin-bottom: 5px; /* Liste elemanları arasında boşluk */
+}
+.task-text {
+    margin-left: 10px; /* Checkbox ile metin arasına boşluk ekleyelim */
+    flex: 1; /* Metnin geri kalan alanı kaplamasını sağlar */
+    overflow: hidden; /* Metin taşmasını engeller */
+    text-overflow: ellipsis; /* Taşan metin için üç nokta gösterir */
+}
